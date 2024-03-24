@@ -1,16 +1,3 @@
-int ft_list_size(t_list *begin_list)
-{
-	int i = 0;
-	t_list *list;
-
-	list = begin_list;
-	while (list)
-	{
-		list =  list -> next;
-		i++;
-	}
-	return(i);
-}
 
 int		ft_list_size(t_list *begin_list)
 {

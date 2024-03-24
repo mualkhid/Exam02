@@ -1,31 +1,5 @@
 #include <stdlib.h>
 
-int ft_strlen(char *str)
-{
-	int i = 0;
-	while (str[i])
-		i++;
-	return(i);
-}
-
-char *ft_strdup(char *src)
-{
-	int i;
-	char *dest;
-	int len;
-	len = ft_strlen(src);
-	dest = (char *)malloc(1 * len + 1);
-	if (!dest)
-		return(NULL);
-	while (src[i])
-	{
-		dest[i] = src[i]
-		i++;
-	}
-	dest[i] = '\0';
-	return(dest);
-}
-
 int		ft_strlen(char *str)
 {
 	int i;

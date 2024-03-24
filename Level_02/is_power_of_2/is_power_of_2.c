@@ -1,27 +1,8 @@
-int		is_power_of_2(unsigned int n)
-{
-	unsigned long i;
-
-	i = 1;
-	while (i < 0xffffffff)
-	{
-		if (i == n)
-			return (1);
-		i *= 2;
-	}
-	return (0);
-}
-
-
 int is_power_of_2(unsigned int n)
 {
-	unsigned long i;
-	i = 1;
-	while (i < 0xffffffff)
-	{
-		if (i == n)
-			return(1);
-		i *= 2;
-	}
-	return(0);
+	if (n == 0)
+		return (0);
+	while (n % 2 == 0)
+		n /= 2;
+	return ((n == 1) ? 1 : 0);
 }

@@ -1,3 +1,4 @@
+
 int		find_char(const char c, const char *str)
 {
 	while (*str)

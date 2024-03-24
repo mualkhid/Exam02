@@ -1,45 +1,5 @@
 #include <unistd.h>
 
-void ft_putstr(char *str)
-{
-	int i= 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++
-	}
-}
-
-int ft_strlen(char *str)
-{
-	int i = 0;
-	while (str[i])
-		i++;
-	return(i);
-}
-
-
-int main(int ac, char **av)
-{
-	int i = 0;
-	char tmp;
-	int len;
-	if (ac == 2)
-	{
-		len = ft_strlen(av[1])
-		while (i < len)
-		{
-			tmp = av[1][i];
-			av[1][i] = av[1][len];
-			av[1][len] = tmp;
-			i++;
-			len--;
-		}
-		ft_putstr(av[1]);
-	}
-	write(1, "\n", 1);
-	
-}
 void	ft_putstr(char *str)
 {
 	int i;

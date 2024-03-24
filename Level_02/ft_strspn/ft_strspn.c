@@ -24,6 +24,79 @@ size_t	ft_strspn(const char *s, const char *accept)
 	return (i);
 }
 
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	printf("%zu\n", ft_strspn("Munia1234", "0123456789"));
+	printf("%zu\n", strspn("Munia1234", "0123456789"));
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //---------------------------------------------------------------
 // #include <stdio.h>
 // int	main(void)

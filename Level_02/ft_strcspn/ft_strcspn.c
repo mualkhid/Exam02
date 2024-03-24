@@ -3,18 +3,18 @@
 size_t	ft_strcspn(const char *s, const char *reject)
 {
 	size_t i;
-	size_t i2;
+	size_t j;
 
 	i = 0;
-	i2 = 0;
+	j = 0;
 	while (s[i] != '\0')
 	{
-		i2 = 0;
-		while (reject[i2] != '\0')
+		j = 0;
+		while (reject[j] != '\0')
 		{
-			if (s[i] == reject[i2])
+			if (s[i] == reject[j])
 				return (i);
-			i2++;
+			j++;
 		}
 		i++;
 	}
@@ -22,4 +22,13 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	while (s[i] != '\0')
 		i++;
 	return (i);
+}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	printf("%zu\n", ft_strcspn("Munia1234", "0123456789"));
+	printf("%zu\n", strcspn("Munia1234", "0123456789"));
+
 }

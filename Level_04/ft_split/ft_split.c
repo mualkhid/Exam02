@@ -5,12 +5,12 @@
 char	**ft_split(char *str)
 {
 	int i;
-	int i2;
-	int i3;
+	int j;
+	int k;
 	char **tab;
 
 	i = 0;
-	i2 = 0;
+	j = 0;
 	tab = (char**)malloc(sizeof(**tab) * WD_NUM);
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 		i++;
@@ -18,20 +18,20 @@ char	**ft_split(char *str)
 	{
 		if (str[i] > 32)
 		{
-			i3 = 0;
-			tab[i2] = (char*)malloc(sizeof(char) * WD_LEN);
+			k = 0;
+			tab[j] = (char*)malloc(sizeof(char) * WD_LEN);
 			while (str[i] > 32)
 			{
-				tab[i2][i3] = str[i];
+				tab[j][k] = str[i];
 				i++;
-				i3++;
+				k++;
 			}
-			tab[i2][i3] = '\0';
-			i2++;
+			tab[j][k] = '\0';
+			j++;
 		}
 		else
 			i++;
 	}
-	tab[i2] = 0;
+	tab[j] = 0;
 	return (tab);
 }
