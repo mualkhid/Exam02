@@ -24,25 +24,31 @@
 // $> ./pgcd | cat -e
 // $
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
-void pgcd(int a, int b)
+void	pgcd(int a, int b)
 {
-	int i = 1;
-	int gcd = 0;
-	while(i < a && i < b)
+	int i;
+	int pgcd;
+
+	i = 1;
+	if (a <= 0 || b <= 0)
+		return ;
+	while (i <= a || i <= b)
 	{
 		if (a % i == 0 && b % i == 0)
-			gcd = i;
+			pgcd = i;
 		i++;
 	}
-	printf("%d\n", gcd);
+	printf("%d", pgcd);
 }
 
-int main(int ac, char **av)
+int		main(int argc, char **argv)
 {
-	if (ac == 3)
-		pgcd(atoi(av[1]), atoi(av[2]));
-	printf("\n")
+	if (argc == 3)
+		pgcd(atoi(argv[1]), atoi(argv[2]));
+	printf("\n");
+	return (0);
 }
